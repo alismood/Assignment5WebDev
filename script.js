@@ -1,11 +1,10 @@
-// ==========================================
-// Part 1: Profile Object, Data Types & Arithmetic
-// ==========================================
 
-// Task 1: The Personal Info Object
+// Profile Object
+
+//The Personal Info Object
 const userProfile = {
     name: "Zhabaikhan Ali",
-    birthYear: 2007,
+    birthYear: 2008,
     isDeveloper: true,
     hobbies: ["Coding", "Reading", "Gaming"]
 };
@@ -19,7 +18,7 @@ const displayMonths = document.getElementById("displayMonths");
 const displayHobbiesCount = document.getElementById("displayHobbiesCount");
 const profileCard = document.getElementById("profileCard");
 
-// Task 2: Arithmetic Calculations and Display Function
+//  Calculations and Display Function
 function updateProfileDisplay() {
     const currentYear = 2026;
     const currentAge = currentYear - userProfile.birthYear;
@@ -41,11 +40,11 @@ function updateProfileDisplay() {
     console.log("Total Hobbies Count:", totalHobbies);
 }
 
-// ==========================================
-// Part 2: Form Input & Event Responses
-// ==========================================
 
-// Task 3 & Task 4: Capture Form Input and Update Profile Object
+//Form Input and Event Responses
+
+
+//Capture Form Input and Update Profile Object
 const profileForm = document.getElementById("profileForm");
 const usernameInput = document.getElementById("usernameInput");
 const birthYearInput = document.getElementById("birthYearInput");
@@ -62,7 +61,7 @@ profileForm.addEventListener("submit", function (event) {
         userProfile.name = newName;
         userProfile.birthYear = newBirthYear;
 
-        // Recalculate and update page content
+        // Calculate and update page content
         updateProfileDisplay();
 
         // Change element content and styles dynamically
@@ -79,17 +78,17 @@ profileForm.addEventListener("submit", function (event) {
     }
 });
 
-// ==========================================
-// Part 3: DOM List Manipulation
-// ==========================================
 
-// Task 5: Creating and Removing Elements
+//DOM List Manipulation
+
+
+//Creating and Removing Elements
 const hobbiesList = document.getElementById("hobbiesList");
 const itemInput = document.getElementById("itemInput");
 const addItemBtn = document.getElementById("addItemBtn");
 const removeItemBtn = document.getElementById("removeItemBtn");
 
-// Render the initial hobbies array using a for loop
+//Hobbies List Function
 function renderInitialHobbies() {
     hobbiesList.innerHTML = "";
     for (let i = 0; i < userProfile.hobbies.length; i++) {
@@ -117,7 +116,7 @@ addItemBtn.addEventListener("click", function () {
     }
 });
 
-// Remove the last item from the list
+//Remove the last item from the list
 removeItemBtn.addEventListener("click", function () {
     const lastItem = hobbiesList.lastElementChild;
 

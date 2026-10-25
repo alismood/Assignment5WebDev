@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - JavaScript Basics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Assignment 5: JavaScript Basics (DOM Manipulation and Events)</h1>
+        <p>Student: Zhabaikhan Ali | Group: IT-2503</p>
+    </header>
+
+    <main class="container">
+        <!-- Part 1: Profile Object, Data Types & Arithmetic -->
+        <section class="card" id="profileCard">
+            <h2>Part 1: User Profile and Arithmetic</h2>
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Birth Year:</strong> <span id="displayBirthYear"></span></p>
+            <p><strong>Is Developer:</strong> <span id="displayIsDeveloper"></span></p>
+            <p><strong>Current Age (Years):</strong> <span id="displayAge"></span></p>
+            <p><strong>Age in Months:</strong> <span id="displayMonths"></span></p>
+            <p><strong>Total Hobbies Count:</strong> <span id="displayHobbiesCount"></span></p>
+        </section>
+
+        <!-- Part 2: Form Input & Event Responses -->
+        <section class="card">
+            <h2>Part 2: Create / Update Profile</h2>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="usernameInput">Username:</label>
+                    <input type="text" id="usernameInput" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthYearInput">Birth Year:</label>
+                    <input type="number" id="birthYearInput" placeholder="Enter your birth year" required>
+                </div>
+                <button type="submit" id="updateProfileBtn">Create / Update Profile</button>
+            </form>
+            <p id="statusMessage"></p>
+        </section>
+
+        <!-- Part 3: DOM List Manipulation -->
+        <section class="card">
+            <h2>Part 3: Hobbies and Tasks List</h2>
+            <div class="form-group">
+                <label for="itemInput">New Hobby or Task:</label>
+                <input type="text" id="itemInput" placeholder="Enter a new item">
+            </div>
+            <div class="button-group">
+                <button type="button" id="addItemBtn">Add Item</button>
+                <button type="button" id="removeItemBtn" class="btn-remove">Remove Item</button>
+            </div>
+            <ul id="hobbiesList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
